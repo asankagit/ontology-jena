@@ -49,7 +49,7 @@ class XmlJTree extends JTree {
   private DefaultMutableTreeNode builtTreeNode(Node root) {
     DefaultMutableTreeNode dmtNode;
 
-    dmtNode = new DefaultMutableTreeNode(root.getNodeName());
+    dmtNode = new DefaultMutableTreeNode(root.getNodeName()/*getTextContent().getNodeName()*/+"\n");
     NodeList nodeList = ((org.w3c.dom.Node) root).getChildNodes();
     for (int count = 0; count < nodeList.getLength(); count++) {
       Node tempNode = (Node) nodeList.item(count);

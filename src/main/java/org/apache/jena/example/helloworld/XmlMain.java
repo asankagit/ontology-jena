@@ -13,10 +13,13 @@ import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreePath;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.riot.system.FactoryRDF;
+import org.apache.jena.riot.system.FactoryRDFStd;
 
 public class XmlMain {
 	static TextField txt_newNode = new TextField ();
@@ -61,9 +64,17 @@ public class XmlMain {
 	    @Override
 	  	  public void valueChanged(TreeSelectionEvent e) {
 	  	     DefaultMutableTreeNode selectedNode =  (DefaultMutableTreeNode)myTree.getLastSelectedPathComponent(); 
-	  	     System.out.println(selectedNode.getUserObject().toString()+"/");  
-	  	     selectedNode.removeFromParent();
+	  	     System.out.println(selectedNode);  
+	  	     //selectedNode.removeFromParent();
 	  	     
+	  	     
+	  	   TreePath treepath = e.getPath();
+           System.out.println("Java: " + treepath.getLastPathComponent());
+           Object elements[] = treepath.getPath();
+              for (int i = 0, n = elements.length; i < n; i++) {
+                  System.out.print("->" + elements[i]);
+              
+              }
 	  	     
 	  	    }
 
@@ -78,7 +89,6 @@ public class XmlMain {
 	    	
 	    });
 	  }
-	  
 	  
 	  
 	}
