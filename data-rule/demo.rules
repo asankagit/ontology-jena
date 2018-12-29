@@ -1,0 +1,4 @@
+[rule1: (?a rdfs:subClassOf ?b)]
+ //,(?b eg:p ?c) -> (?a eg:p ?c)]
+//[r1: (?A rdfs:subClassOf ?C)]
+//[r1:  (?x rdfs:subClassOf ?y)

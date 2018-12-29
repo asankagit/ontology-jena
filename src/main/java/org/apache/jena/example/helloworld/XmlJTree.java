@@ -49,13 +49,13 @@ class XmlJTree extends JTree {
   private DefaultMutableTreeNode builtTreeNode(Node root) {
     DefaultMutableTreeNode dmtNode;
 
-    dmtNode = new DefaultMutableTreeNode(root.getNodeName()/*getTextContent().getNodeName()*/+"\n");
+    dmtNode = new DefaultMutableTreeNode(root.getBaseURI()+root.getNodeName()+"||"+root.getTextContent()/*getTextContent()/*.getNodeName()*/+"\n");
     NodeList nodeList = ((org.w3c.dom.Node) root).getChildNodes();
     for (int count = 0; count < nodeList.getLength(); count++) {
       Node tempNode = (Node) nodeList.item(count);
 
       
-     System.out.print(tempNode);
+     System.out.println(tempNode+"-"+tempNode.getNodeName());
       if (((org.w3c.dom.Node) tempNode).getNodeType() == Node.ELEMENT_NODE) {
         if (((org.w3c.dom.Node) tempNode).hasChildNodes()) {
           dmtNode.add(builtTreeNode(tempNode));

@@ -64,7 +64,7 @@ public class XmlMain {
 	    @Override
 	  	  public void valueChanged(TreeSelectionEvent e) {
 	  	     DefaultMutableTreeNode selectedNode =  (DefaultMutableTreeNode)myTree.getLastSelectedPathComponent(); 
-	  	     System.out.println(selectedNode);  
+	  	     System.out.println("parent path:"+selectedNode.getParent());  
 	  	     //selectedNode.removeFromParent();
 	  	     
 	  	     
@@ -83,9 +83,11 @@ public class XmlMain {
 	    
 	    
 	    btn_addchild.addActionListener( e->{
-	    	//XmlDataWrite dw = new XmlDataWrite();
+	    	String tmp_property = txt_newNode.getText();
+	    	XmlDataWrite.addSubClasss(tmp_property);
 	    	
-	    	System.out.println();
+	    	
+	    	System.out.println("Add new Child btn clied");
 	    	
 	    });
 	  }
