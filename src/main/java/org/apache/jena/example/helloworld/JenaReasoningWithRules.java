@@ -18,7 +18,7 @@ public class JenaReasoningWithRules
 	public static void main(String[] args) 
 	{
 		Model model = ModelFactory.createDefaultModel();
-		model.read( "data-rule/dataset.n3" );
+		model.read( "data-rule/pizza.xml" );
 		
 		Reasoner reasoner = new GenericRuleReasoner( Rule.rulesFromURL( "data-rule/rules.txt" ) );
 		
