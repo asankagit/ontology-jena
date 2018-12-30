@@ -52,3 +52,4 @@ public class InfereneGen {
 
 
 //https://www.w3.org/TR/turtle/
+//https://tutorial-academy.com/jena-reasoning-with-rules/
