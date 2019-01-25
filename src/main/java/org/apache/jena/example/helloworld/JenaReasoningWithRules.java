@@ -18,10 +18,10 @@ public class JenaReasoningWithRules
 	public static void main(String[] args) 
 	{
 		Model model = ModelFactory.createDefaultModel();
-//		model.read( "data-rule/pizza.xml" );
-		model.read( "data-rule/updatedrules/tp.rdf" );
+		model.read( "data-rule/updatedrules/rulebasedInferenceDataSet.rdf" );
+//		model.read( "data-rule/updatedrules/tp.rdf" );
 		
-		Reasoner reasoner = new GenericRuleReasoner( Rule.rulesFromURL( "data-rule/updatedrules/tp.rule" ) );
+		Reasoner reasoner = new GenericRuleReasoner( Rule.rulesFromURL( "data-rule/rules.txt" ) );
 		
 		InfModel infModel = ModelFactory.createInfModel( reasoner, model );
 

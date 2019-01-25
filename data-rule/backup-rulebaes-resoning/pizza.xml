@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		 xmlns="http://tutorialacademy.com/2015/jena#">
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Jhon">
+		<rdf:type rdf:resource="http://tutorialacademy.com/2015/jena#Person"/>
+		<hasClass>Maths</hasClass>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lk#Bill">
+		<rdf:type rdf:resource="http://tutorialacademy.com/2015/jena#Person"/>
+		<teaches>Maths</teaches>
+		<grade>10</grade>
+	</rdf:Description>
+</rdf:RDF>

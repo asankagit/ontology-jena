@@ -1,5 +1,4 @@
-@prefix : <http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#> .
-
+@prefix : <http://tutorialacademy.com/2015/jena#> .
 
 [ruleHasStudent: (?s :hasClass ?c) (?p :teaches ?c) -> (?p :hasStudent ?s)],
 [ruleisTeaching: (?s :hasClass ?c) (?p :hasStudent ?s)-> (?p :isTeaching ?c)],

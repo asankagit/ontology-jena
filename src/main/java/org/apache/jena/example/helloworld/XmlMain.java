@@ -23,9 +23,12 @@ import org.apache.jena.riot.system.FactoryRDFStd;
 
 public class XmlMain {
 	static TextField txt_newNode = new TextField ();
+	static TextField txt_superClass = new TextField ();
+	 
 	String inputNode = "";
 	
 	  public static void main(String[] args) {
+		  txt_superClass.setText("SuperClassName");
 	    JFrame f = new JFrame();
 
 	    f.setSize(300, 500);
@@ -45,6 +48,7 @@ public class XmlMain {
 	          "xml");
 	      chooser.setFileFilter(filter);
 	      int returnVal = chooser.showOpenDialog(null);
+	      
 	      if (returnVal == JFileChooser.APPROVE_OPTION) {
 	        myTree.setPath(chooser.getSelectedFile().getAbsolutePath());
 	      }
@@ -55,6 +59,7 @@ public class XmlMain {
 	    pan.add(btn_addsybling);
 	    pan.add(btn_delete);
 	    pan.add(txt_newNode);
+	    pan.add(txt_superClass);
 	    f.add(pan, BorderLayout.SOUTH);
 	    f.setVisible(true);
 	    
@@ -83,8 +88,22 @@ public class XmlMain {
 	    
 	    
 	    btn_addchild.addActionListener( e->{
-	    	String tmp_property = txt_newNode.getText();
-	    	XmlDataWrite.addSubClasss(tmp_property);
+	    	String subclass = txt_newNode.getText();
+	    	
+	    	String superclass = txt_superClass.getText();
+	    	XmlDataWrite.addSubClasss(superclass, subclass);
+	    	
+	    	
+	    	System.out.println("Add new Child btn clied");
+	    	
+	    });
+	    
+	    
+	    btn_addsybling.addActionListener( e->{
+	    	String subclass = txt_newNode.getText();
+	    	
+	    	String superclass = txt_superClass.getText();
+	    	XmlDataWrite.createClass(superclass, subclass, "propvalue");
 	    	
 	    	
 	    	System.out.println("Add new Child btn clied");

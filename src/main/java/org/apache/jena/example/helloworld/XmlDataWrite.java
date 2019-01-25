@@ -17,24 +17,24 @@ import org.apache.jena.vocabulary.VCARD;
 
 public class XmlDataWrite {
 
-	public static void createClass(String[] args) {
+	public static void createClass(String  classname,String property,String propvalue) {
 		   Model m = ModelFactory.createDefaultModel();
 		   
 	        m.read("C:/Users/DELL/Desktop/Car.xml", "RDF/XML");
 	        String NS="http://www.co-ode.org/ontologies/pizza/pizza.owl#";
 
-	        Resource r = m.createResource(NS+"xpicsa");//like subject
-	        Property p1 = m.createProperty(NS+"manufacture");
-	        Property p2 = m.createProperty(NS+"model");
-	        Property p3 = m.createProperty(NS+"year");
-	        Property p4 = m.createProperty(NS+"mfd");
+	        Resource r = m.createResource(NS+classname);//like subject
+	        Property p1 = m.createProperty(NS+property);
+//	        Property p2 = m.createProperty(NS+"model");
+//	        Property p3 = m.createProperty(NS+"year");
+//	        Property p4 = m.createProperty(NS+"mfd");
 	        //m.add(r, RDFS.subClassOf, NS);
 
 	        
-	        r.addProperty(p1, "xmade in German", XSDDatatype.XSDstring);
-	        r.addProperty(p2, "xGM", XSDDatatype.XSDstring);
-	        r.addProperty(p3, "x20187", XSDDatatype.XSDstring);
-	        r.addProperty(p4, "x2018", XSDDatatype.XSDstring);
+	        r.addProperty(p1, propvalue, XSDDatatype.XSDstring);
+//	        r.addProperty(p2, "xGM", XSDDatatype.XSDstring);
+//	        r.addProperty(p3, "x20187", XSDDatatype.XSDstring);
+//	        r.addProperty(p4, "x2018", XSDDatatype.XSDstring);
 	      //   m.write(System.out,"thurtle");
 	          try {
 				m.write(new FileOutputStream("C:/Users/DELL/Desktop/Car.xml"), "RDF/XML");
@@ -56,18 +56,18 @@ public class XmlDataWrite {
 	          /*read*/
 	}
 	
-	public static void addSubClasss(String property) {
+	public static void addSubClasss(String superclass,String subclass) {
 		Model m = ModelFactory.createDefaultModel();
 		   
         m.read("C:/Users/DELL/Desktop/Car.xml", "RDF/XML");
         String NS="http://www.co-ode.org/ontologies/pizza/pizza.owl#";
 
-        Resource r = m.createResource(NS+property);//like subject
+        Resource r = m.createResource(NS+subclass);//like subject
 //        Property p1 = m.createProperty(NS+"lname");
 //        Property p2 = m.createProperty(NS+"email");
 //        Property p3 = m.createProperty(NS+"fname");
 //        Property p4 = m.createProperty(NS+"mfd");
-        m.add(r, RDFS.subClassOf, NS+"porche");
+        m.add(r, RDFS.subClassOf, NS+superclass);
 
         
 //        r.addProperty(p1, "made in Japan", XSDDatatype.XSDstring);

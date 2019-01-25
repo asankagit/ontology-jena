@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		
+		 xmlns="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#">
+		 
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Jhon">
+		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Person"/>
+		<driveClass>Formula_1</driveClass>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lk#Bill">
+		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Instructor"/>
+		<teaches>Formula_1</teaches>
+		<rank>10</rank>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Lambogini">
+		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Vehicle"/>
+		<expensiveThan>Toyota</expensiveThan>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Toyota">
+		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Vehicle"/>
+		<expensiveThan>Nissan</expensiveThan>
+	</rdf:Description>
+	
+</rdf:RDF>

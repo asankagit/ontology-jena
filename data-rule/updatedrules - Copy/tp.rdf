@@ -179,14 +179,13 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Wilson"/>
 	
 	<!--manually copied-->
-	
-	<rdf:Description rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Jhon">
-		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#RacingDriver"/>
-		<hasClass>Formula1</hasClass>
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Jhon">
+		<rdf:type rdf:resource="http://tutorialacademy.com/2015/jena#Person"/>
+		<hasClass>Maths</hasClass>
 	</rdf:Description>
-	<rdf:Description rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Bill">
-		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Instructor"/>
-		<teaches>Formula1</teaches>
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lk#Bill">
+		<rdf:type rdf:resource="http://tutorialacademy.com/2015/jena#Person"/>
+		<teaches>Maths</teaches>
 		<grade>10</grade>
 	</rdf:Description>
 	
@@ -194,7 +193,6 @@
 	
 	
 </rdf:RDF>
-
 
 
 

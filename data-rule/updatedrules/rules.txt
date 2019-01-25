@@ -1,0 +1,10 @@
+@prefix : <http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#> .
+
+
+[ruleHasStudent: (?s :driveClass ?c) (?p :teaches ?c) -> (?p :hasStudent ?s)],
+[ruleisTeaching: (?s :driveClass ?c) (?p :hasStudent ?s)-> (?p :isTeaching ?c)],
+[ruleGrade:(?p :rank ?g)(?p :hasStudent ?s) -> (?s :inRank ?g )],
+
+
+[ruleExpensiveThan: (?a :expensiveThan ?b) (?b :expensiveThan ?c) -> (?a :expensiveThan ?c)],
+
