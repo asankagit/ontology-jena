@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#"
+     xml:base="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Drives -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Drives">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#IsDrivenBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Vehicle"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#IsDrivenBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#IsDrivenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#IsDrivenBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Cargo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Cargo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Vehicle"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#PassengerVehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#EconomicalVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#EconomicalVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#PassengerVehicle"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LuxuryVehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#HeavyGoodsVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#HeavyGoodsVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Cargo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LargeGoodsVehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LargeGoodsVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LargeGoodsVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Cargo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LuxuryVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LuxuryVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#PassengerVehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#IsDrivenBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RacingDriver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Non-RacingDriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Non-RacingDriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RacingDriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#PassengerVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#PassengerVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RacingDriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RacingDriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RacingVersion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RacingVersion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LuxuryVehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#IsDrivenBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RacingDriver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RoadVersion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RoadVersion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#RoadVersion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#LuxuryVehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Vehicle"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

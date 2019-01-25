@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#"
+     xml:base="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#IsOwnedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#IsOwnedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Owns"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Telephone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Person"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Owns"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Owns">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Telephone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#CDMAPhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#CDMAPhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#LandPhone"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#WiredPhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#CellularPhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#CellularPhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#MobilePhone"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#SatellitePhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#General -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#General">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VIP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#HighEndSatellitePhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#HighEndSatellitePhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#SatellitePhone"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#IsOwnedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VVIP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#NormalSatellitePhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#LandPhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#LandPhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Telephone"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#MobilePhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#MobilePhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#MobilePhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Telephone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#NormalSatellitePhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#NormalSatellitePhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#SatellitePhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#SatellitePhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#SatellitePhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#MobilePhone"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#IsOwnedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VIP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Telephone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Telephone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VIP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VIP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VVIP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VVIP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#VIP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#WiredPhone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#WiredPhone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shanii/ontologies/2019/0/telephone#LandPhone"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

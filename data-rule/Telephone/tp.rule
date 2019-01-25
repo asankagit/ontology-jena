@@ -1,0 +1,9 @@
+@prefix : <http://www.semanticweb.org/shanii/ontologies/2019/0/telephonedataset#> .
+
+
+
+[ruleSubclass: (?v :subClassOf "HightEndSatterlitePhone")(?p :teaches ?c) -> (?p :hasStudent ?s)],
+
+[ruleHasVip: (?s :hasClass ?c) (?p :teaches ?c) -> (?p :hasStudent ?s)],
+[ruleisTeaching: (?s :hasClass ?c) (?p :hasStudent ?s)-> (?p :isTeaching ?c)],
+[ruleGrade:(?p :grade ?g)(?p :hasStudent ?s) -> (?s :inGrade ?g )],

@@ -17,13 +17,13 @@ import org.apache.jena.vocabulary.VCARD;
 
 public class XmlDataWrite {
 
-	public static void main(String[] args) {
+	public static void createClass(String[] args) {
 		   Model m = ModelFactory.createDefaultModel();
 		   
 	        m.read("C:/Users/DELL/Desktop/Car.xml", "RDF/XML");
 	        String NS="http://www.co-ode.org/ontologies/pizza/pizza.owl#";
 
-	        Resource r = m.createResource(NS+"picsa");//like subject
+	        Resource r = m.createResource(NS+"xpicsa");//like subject
 	        Property p1 = m.createProperty(NS+"manufacture");
 	        Property p2 = m.createProperty(NS+"model");
 	        Property p3 = m.createProperty(NS+"year");
@@ -31,10 +31,10 @@ public class XmlDataWrite {
 	        //m.add(r, RDFS.subClassOf, NS);
 
 	        
-	        r.addProperty(p1, "made in German", XSDDatatype.XSDstring);
-	        r.addProperty(p2, "GM", XSDDatatype.XSDstring);
-	        r.addProperty(p3, "20187", XSDDatatype.XSDstring);
-	        r.addProperty(p4, "2018", XSDDatatype.XSDstring);
+	        r.addProperty(p1, "xmade in German", XSDDatatype.XSDstring);
+	        r.addProperty(p2, "xGM", XSDDatatype.XSDstring);
+	        r.addProperty(p3, "x20187", XSDDatatype.XSDstring);
+	        r.addProperty(p4, "x2018", XSDDatatype.XSDstring);
 	      //   m.write(System.out,"thurtle");
 	          try {
 				m.write(new FileOutputStream("C:/Users/DELL/Desktop/Car.xml"), "RDF/XML");
@@ -49,10 +49,10 @@ public class XmlDataWrite {
 	          RDFDataMgr.write(System.out, m, Lang.TTL);//add syblings 
 	        
 	          /*read*/
-	          Resource vcard = m.getResource("http://www.co-ode.org/ontologies/pizza/pizza.owl#picsa");
-	          Resource name = vcard.getProperty(p1).getResource();
-	          System.out.println("-----");
-	          System.out.println(name);
+//	          Resource vcard = m.getResource("http://www.co-ode.org/ontologies/pizza/pizza.owl#picsa");
+//	          Resource name = vcard.getProperty(p1).getResource();
+//	          System.out.println("-----");
+//	          System.out.println(name);
 	          /*read*/
 	}
 	
