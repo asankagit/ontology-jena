@@ -17,9 +17,26 @@
 		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Vehicle"/>
 		<expensiveThan>Toyota</expensiveThan>
 	</rdf:Description>
-	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Toyota">
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lk#Toyota">
 		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Vehicle"/>
 		<expensiveThan>Nissan</expensiveThan>
 	</rdf:Description>
+	
+	
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Ferrari">
+		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Person"/>
+		<expensive>Fo</expensive>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lk#Toyotax123">
+		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Instructor"/>
+		<expensive>Fo</expensive>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Shoemarker">
+		<rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Person"/>
+		<won>F1_2018</won>
+	</rdf:Description>
+	
+	
 	
 </rdf:RDF>

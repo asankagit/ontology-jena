@@ -1,8 +1,0 @@
-@prefix : <http://www.semanticweb.org/shanii/ontologies/2019/0/telephonedataset#> .
-
-
-[ruleisSuper:(?s :Brand "GTR")->(?s :isSuper "x") ]
-
-//[ruleHasVip: (?s :hasClass ?c) (?p :teaches ?c) -> (?p :hasStudent ?s)],
-//[ruleisTeaching: (?s :hasClass ?c) (?p :hasStudent ?s)-> (?p :isTeaching ?c)],
-//[ruleGrade:(?p :grade ?g)(?p :hasStudent ?s) -> (?s :inGrade ?g )],//

@@ -4,7 +4,9 @@
 [ruleHasStudent: (?s :driveClass ?c) (?p :teaches ?c) -> (?p :hasStudent ?s)],
 [ruleisTeaching: (?s :driveClass ?c) (?p :hasStudent ?s)-> (?p :isTeaching ?c)],
 [ruleGrade:(?p :rank ?g)(?p :hasStudent ?s) -> (?s :inRank ?g )],
+[ruleExpensiveThan: (?a :expensive ?b) (?c :expensive ?b) -> (?a :isAnExpensiveOneThan ?c)],
+
+[symRule:(?r :won ?co) -> (?co :championWas ?r)]
 
 
-[ruleExpensiveThan: (?a :expensiveThan ?b) (?b :expensiveThan ?c) -> (?a :expensiveThan ?c)],
 
