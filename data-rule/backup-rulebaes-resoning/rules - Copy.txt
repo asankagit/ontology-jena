@@ -1,6 +1,0 @@
-@prefix : <http://tutorialacademy.com/2015/jena#> .
-
-[ruleHasStudent: (?s :hasClass ?c) (?p :teaches ?c) -> (?p :hasStudent ?s)],
-[ruleisTeaching: (?s :hasClass ?c) (?p :hasStudent ?s)-> (?p :isTeaching ?c)],
-[ruleGrade:(?p :grade ?g)(?p :hasStudent ?s) -> (?s :inGrade ?g )],
-

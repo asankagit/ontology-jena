@@ -18,6 +18,35 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/grade -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/grade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/hasClass -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/hasClass"/>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/teaches -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/teaches"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -78,6 +107,29 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Instructor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Instructor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#RacingDriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#RacingDriver"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -86,9 +138,29 @@
     
 
 
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Bill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Bill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Instructor"/>
+        <grade>10</grade>
+        <teaches>Formula1</teaches>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Jhon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#Jhon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset#RacingDriver"/>
+        <hasClass>Formula1</hasClass>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Bugati -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Bugati">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Veron_X"/>
         <telephone:IsDrivenBy rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Paul"/>
         <telephone:IsDrivenBy rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Wilson"/>
     </owl:NamedIndividual>
@@ -112,6 +184,16 @@
         <telephone:Drives rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/NissanGTR"/>
         <FirstName>Dilantha</FirstName>
         <LastName>Malagamuwa</LastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Gayan_Sandaruwan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Gayan_Sandaruwan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Non-RacingDriver"/>
+        <FirstName>Gayan</FirstName>
+        <LastName>Sandaruwan</LastName>
     </owl:NamedIndividual>
     
 
@@ -143,16 +225,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Roshan_Kulathilake -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Roshan_Kulathilake">
-        <rdf:type rdf:resource="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicle#Non-RacingDriver"/>
-        <FirstName>Roshan</FirstName>
-        <LastName>Kulathilake</LastName>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/SubaruSTI9 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/SubaruSTI9">
@@ -173,25 +245,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Veron_X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Veron_X"/>
+    
+
+
     <!-- http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Wilson -->
 
-	
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/symantic/ontologies/2019/0/vehicledataset/Wilson"/>
-	
-	<!--manually copied-->
-	<rdf:Description rdf:about="http://www.mit.kln.ac.lkf#Jhon">
-		<rdf:type rdf:resource="http://tutorialacademy.com/2015/jena#Person"/>
-		<hasClass>Maths</hasClass>
-	</rdf:Description>
-	<rdf:Description rdf:about="http://www.mit.kln.ac.lk#Bill">
-		<rdf:type rdf:resource="http://tutorialacademy.com/2015/jena#Person"/>
-		<teaches>Maths</teaches>
-		<grade>10</grade>
-	</rdf:Description>
-	
-	
-	
-	
 </rdf:RDF>
 
 
